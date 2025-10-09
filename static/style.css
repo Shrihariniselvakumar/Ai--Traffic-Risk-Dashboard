@@ -1,0 +1,129 @@
+/* --- Body & Header --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+/* --- Area Selection --- */
+.area-selection {
+    margin: 20px;
+}
+
+select, button {
+    padding: 12px 18px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: #fff;
+}
+
+select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+button {
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+}
+
+/* --- Cards Container --- */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* --- Individual Cards --- */
+.card {
+    display: inline-block;
+    width: 220px;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 70%);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.card.high { border-left: 6px solid #e74c3c; }
+.card.medium { border-left: 6px solid #f39c12; }
+.card.low { border-left: 6px solid #2ecc71; }
+
+/* --- Alerts --- */
+#alerts-container {
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.high-risk { color: #e74c3c; }
+.medium-risk { color: #f39c12; }
+.low-risk { color: #2ecc71; }
+
+/* --- Map & Chart --- */
+#map { height: 400px; margin: 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.chart-container { width: 80%; margin: 0 auto 50px auto; }
+
+/* --- Fade-in Animation --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card, select, button {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+
+

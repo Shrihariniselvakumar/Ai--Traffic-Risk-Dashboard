@@ -1,0 +1,7 @@
+{
+  "locations": [
+    {"name": "Main Street", "vehicle_count": 60, "speed": 80, "traffic": "High", "weather": "Rainy", "lat": 12.9716, "lng": 77.5946},
+    {"name": "2nd Avenue", "vehicle_count": 30, "speed": 60, "traffic": "Medium", "weather": "Clear", "lat": 12.9726, "lng": 77.5956},
+    {"name": "3rd Road", "vehicle_count": 15, "speed": 40, "traffic": "Low", "weather": "Foggy", "lat": 12.9736, "lng": 77.5966}
+  ]
+}

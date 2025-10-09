@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Road Safety Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🚦 AI Road Safety Dashboard</h1>
+  </header>
+
+  <div class="area-selection">
+    <select id="area-select"></select>
+    <button id="select-area-btn">Monitor Area</button>
+  </div>
+
+  <div id="alerts-container"></div>
+
+  <div class="cards-container" id="cards-container"></div>
+
+  <div id="map"></div>
+
+  <div class="chart-container">
+    <canvas id="trafficChart"></canvas>
+  </div>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
